@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Visit to Kompas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <img src="yri.png" alt="Logo Organisasi" />
+        <div>
+          <button class="hamburger" id="hamburger">
+            <span></span>
+          </button>
+          <nav>
+            <ul class="nav-links" id="navLinks">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Berita</a></li>
+              <li><a href="#">Tentang</a></li>
+            </ul>
+            <ul class="nav-links mobile" id="navLinksMobile">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Berita</a></li>
+              <li><a href="#">Tentang</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="article-container">
+        <h1 class="article-title">
+          Youth Ranger Indonesia Eksplorasi Dunia Media Melalui Company Visit ke
+          Harian Kompas
+        </h1>
+        <div class="article-meta">
+          <p>04 Oktober 2025</p>
+          <p>Oleh: Anisa Putri Balqis</p>
+        </div>
+        <img
+          src="comvis.png"
+          alt="Company Visit to Kompas"
+          class="article-image"
+          id="mainImage"
+        />
+        <div class="article-content">
+          <p>
+            Jakarta, 26 September 2025 — Youth Ranger Indonesia (YRI)
+            berkesempatan melakukan company visit ke kantor Harian Kompas,
+            Jakarta (26/09/20205). “MEET THE MAKERS” yang diselenggarakan oleh
+            Youth Ranger Indonesia X Harian Kompas.
+          </p>
+          <p>
+            Kegiatan diawali dengan sambutan dari perwakilan Youth Ranger
+            Indonesia, yaitu Dimas Dwi Pangestu selaku CEO Representative Youth
+            Ranger Indonesia dan Raden Muhammad Rafi selaku Chief Relations
+            Officer. Selanjutnya, sesi materi disampaikan oleh dua narasumber
+            dari pihak Kompas, yaitu Ahmad Khotib Sya’roni selaku tim
+            Partnership Harian Kompas bersama Galih Smarapradhipa selaku Brand
+            and Product Marketing Harian Kompas.
+          </p>
+          <p>
+            Dalam kesempatan ini, peserta mendapatkan wawasan langsung mengenai
+            ekosistem media di bawah naungan Kompas Gramedia, termasuk Harian
+            Kompas, kompas.id, serta Kompas Institute. Kompas juga
+            memperkenalkan KompasMuda.com, sebuah laman yang menjadi wadah bagi
+            para pemuda untuk mempublikasikan karya tulis mereka.
+          </p>
+          <p>
+            Para narasumber juga menekankan pentingnya independensi sebuah media
+            dalam menjaga kredibilitasnya. Disampaikan bahwa Harian Kompas
+            pernah menghadapi berbagai tekanan dari sejumlah pihak, namun tetap
+            teguh mempertahankan prinsip dan integritas jurnalistiknya.
+            Pembicaraan kemudian dilanjutkan oleh Roni, yang menjelaskan alur
+            pemberitaan di Harian Kompas, mulai dari penyusunan draft hingga
+            proses penerbitan.
+          </p>
+          <p>
+            Selain itu, para peserta diperkenalkan pada program pelatihan
+            fotografer, videografer, maupun peran kreatif lain. Lebih lanjut,
+            Kompas membuka kesempatan program magang sebanyak tiga kali dalam
+            setahun, yang dapat menjadi sarana pengembangan karier generasi muda
+            di dunia media.
+          </p>
+          <p>
+            Dari sisi praktik jurnalisme, Kompas menekankan bahwa jurnalisme
+            sejati yang berpihak pada kebenaran dengan prinsip cek, recheck, dan
+            crosscheck. Untuk memastikan netralitas berita, setiap laporan
+            melewati empat lapisan pemeriksaan editorial. Menariknya, Kompas
+            juga mengulas fenomena rendahnya minat baca di Indonesia, sehingga
+            diperlukan judul berita yang kontekstual dan menarik perhatian
+            pembaca tanpa keluar dari substansi isi berita.
+          </p>
+          <p>
+            Kunjungan ini ditutup dengan company tour ke berbagai bagian di
+            kantor Harian Kompas dan dilanjutkan dengan networking session
+            bersama tim Kompas. Momen ini menjadi sarana berharga bagi peserta
+            Youth Ranger Indonesia untuk menjalin relasi, berdiskusi langsung,
+            dan memperluas wawasan tentang dunia media dan jurnalisme.
+          </p>
+        </div>
+        <div class="share-section">
+          <p>Bagikan Artikel</p>
+          <div class="share-logos">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_(2019).png"
+              alt="Facebook"
+              onclick="shareToFacebook()"
+            />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
+              alt="Instagram"
+              onclick="shareToInstagram()"
+            />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+              alt="WhatsApp"
+              onclick="shareToWhatsApp()"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Portofolio - Cantik Alya Isnaeni. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("navLinksMobile");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        mobileMenu.classList.toggle("active");
+      });
+
+      document
+        .getElementById("mainImage")
+        .addEventListener("click", function () {
+          const enlargedImage = window.open(
+            "",
+            "Enlarged Image",
+            "width=800,height=600"
+          );
+          enlargedImage.document.write(`
+                <html>
+                <head>
+                    <title>Gambar Diperbesar</title>
+                    <style>
+                        body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background: rgba(0,0,0,0.8); }
+                        img { max-width: 100%; max-height: 100%; }
+                    </style>
+                </head>
+                <body>
+                    <img src="${this.src}" alt="Enlarged Image">
+                </body>
+                </html>
+            `);
+          enlargedImage.document.close();
+        });
+
+      function shareToFacebook() {
+        const shareUrl =
+          "https://www.facebook.com/sharer/sharer.php?u=https://unclebigbay.hashnode.dev" +
+          encodeURIComponent(window.location.href);
+        window.open(shareUrl, "_blank");
+      }
+
+      function shareToInstagram() {
+        alert(
+          "Instagram tidak mendukung sharing link langsung dari web. Silakan salin link ini: " +
+            window.location.href
+        );
+      }
+
+      function shareToWhatsApp() {
+        const shareText =
+          "Cek artikel ini: " + encodeURIComponent(window.location.href);
+        const shareUrl = "https://wa.me/?text=" + shareText;
+        window.open(shareUrl, "_blank");
+      }
+    </script>
+  </body>
+</html>

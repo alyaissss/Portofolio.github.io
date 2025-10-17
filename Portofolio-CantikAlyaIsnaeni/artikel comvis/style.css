@@ -1,0 +1,262 @@
+:root {
+  --bgColor: #fff;
+  --pink: #f66c82;
+  --kuning: #f0b44f;
+  --ungu: #7b60a5;
+}
+
+/* CSS untuk styling yang menarik dan responsif */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bgColor);
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(to right, #7b60a5, #f66c82);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.navbar img {
+  height: 40px;
+  width: auto;
+  margin-right: 1rem;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--kuning);
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  z-index: 1001;
+}
+
+.hamburger span,
+.hamburger span::before,
+.hamburger span::after {
+  display: block;
+  background-color: white;
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.hamburger span::before {
+  content: "";
+  top: -8px;
+}
+
+.hamburger span::after {
+  content: "";
+  top: 8px;
+}
+
+.hamburger.active span {
+  background-color: transparent;
+}
+
+.hamburger.active span::before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span::after {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.nav-links.mobile {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--ungu);
+  position: absolute;
+  top: 60px;
+  left: 0;
+  animation: slideDown 0.3s ease;
+}
+
+.nav-links.mobile.active {
+  display: flex;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.mobile {
+    top: 50px;
+  }
+
+  .navbar img {
+    height: 30px;
+  }
+
+  .article-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: justify !important;
+  }
+
+  .article-container {
+    margin: 1rem;
+    padding: 1rem 2rem;
+  }
+
+  .article-title {
+    font-size: 1.5rem;
+  }
+
+  .share-logos img {
+    width: 40px; /* Ukuran logo di mobile */
+    height: auto;
+    margin: 0.5rem;
+  }
+}
+
+.article-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: var(--bgColor);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.article-title {
+  color: var(--ungu);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.article-meta {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 2rem;
+  display: flex; /* Menggunakan flexbox */
+  flex-direction: column; /* Elemen ditata secara vertikal */
+  align-items: center;
+  gap: 0;
+}
+
+.article-meta p {
+  margin: 0; /* Tambahan: Menghapus margin default pada elemen <p> untuk mengurangi jarak */
+}
+
+.article-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.article-image:hover {
+  transform: scale(1.05);
+}
+
+.article-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.share-section {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.share-section p {
+  font-size: 1rem;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.share-logos {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Jarak antar logo */
+}
+
+.share-logos img {
+  width: 30px; /* Ukuran default logo */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.share-logos img:hover {
+  transform: scale(1.1); /* Efek hover */
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--ungu);
+  color: white;
+  margin-top: 2rem;
+}
